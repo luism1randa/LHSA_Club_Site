@@ -65,35 +65,30 @@
         </div>
     </section>
 
-    <section class="content-section">
+    <section class="content-section" >
         <h2>Our Latest Event</h2>
 
-        <?php
-            echo "PHP goes here";
-            echo "commited branch"
-        ?>
-
-        <div class="calendar-container">
-            <div class="event-title">
-                ASTEC Lab Tour
+        <div class="calendar-container" id="calendar-container">
+            <div class="event-title" id="event-title">
+                
             </div>
 
             <div class="date-container">
-                <div class="month">Sept</div>
-                <div class="day">20</div>
+                <div class="month" id="month">Sept</div>
+                <div class="day" id="day">20</div>
             </div>
 
             <div class="time-location">
-                <div class="time">
-                    <b>Time</b>: 3:30PM - 5:30PM
+                <div class="time" id="time">
+                    <b>Time</b>: 
                 </div>
 
-                <div class="location">
-                    <b>Location</b>: Health Sciences Library
+                <div class="location" id="location">
+                    <b>Location</b>: 
                 </div>
 
-                <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <div class="description" id="description">
+                    
                 </div>
             </div>
            
@@ -176,5 +171,44 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        var eventTitle = document.getElementById("event-title");
+        var month = document.getElementById("month");
+        var day = document.getElementById("day");
+        var time = document.getElementById("time");
+        var locat = document.getElementById("location");
+        var description = document.getElementById("description");
+
+        let calendarContainer = document.getElementById("calendar-container").innerHTML;
+
+        let ajax = new XMLHttpRequest();
+        ajax.open('GET', 'includes/controller.php');
+        ajax.send();
+
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState === 4 && ajax.status === 200) {
+
+                let nextEvent = JSON.parse(ajax.responseText);
+
+                if (nextEvent === null){
+                    calendarContainer = "No upcoming events";
+                } else {
+                    eventTitle.innerHTML = nextEvent['Event_Title'];
+
+                    dateComponents = nextEvent['Date'].split(" ");
+                    month.innerHTML = dateComponents[0].substring(0, 3);
+                    day.innerHTML = dateComponents[1];
+
+                    time.innerHTML = "<b>Time</b>: " + nextEvent['Time_Begin'] + " - " + nextEvent['Time_End'];
+                    locat.innerHTML = "<b>Location</b>: " + nextEvent['Location'];
+                    description.innerHTML = nextEvent['Description'];
+                }
+            }
+        };
+        
+    </script>
+
 </body>
 </html>

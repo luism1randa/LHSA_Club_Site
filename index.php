@@ -68,6 +68,10 @@
     <section class="content-section">
         <h2>Our Latest Event</h2>
 
+        <?php
+            echo "PHP goes here";
+        ?>
+
         <div class="calendar-container">
             <div class="event-title">
                 ASTEC Lab Tour

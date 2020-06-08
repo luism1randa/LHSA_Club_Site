@@ -80,15 +80,12 @@
 
             <div class="time-location">
                 <div class="time" id="time">
-                    <b>Time</b>: 
                 </div>
 
                 <div class="location" id="location">
-                    <b>Location</b>: 
                 </div>
 
                 <div class="description" id="description">
-                    
                 </div>
             </div>
            
@@ -184,14 +181,18 @@
         let calendarContainer = document.getElementById("calendar-container").innerHTML;
 
         let ajax = new XMLHttpRequest();
-        ajax.open('GET', 'includes/controller.php');
+        ajax.open('GET', 'includes/controller.php?onHomePage=true');
         ajax.send();
 
         ajax.onreadystatechange = function() {
             if (ajax.readyState === 4 && ajax.status === 200) {
 
+                console.log(ajax.responseText);
+
                 let nextEvent = JSON.parse(ajax.responseText);
 
+                // TODO: Display message if there are no upcoming events
+                
                 if (nextEvent === null){
                     calendarContainer = "No upcoming events";
                 } else {

@@ -170,15 +170,13 @@
     </footer>
 
     <script>
-
+        var calendarContainer = document.getElementById("calendar-container");
         var eventTitle = document.getElementById("event-title");
         var month = document.getElementById("month");
         var day = document.getElementById("day");
         var time = document.getElementById("time");
         var locat = document.getElementById("location");
         var description = document.getElementById("description");
-
-        let calendarContainer = document.getElementById("calendar-container").innerHTML;
 
         let ajax = new XMLHttpRequest();
         ajax.open('GET', 'includes/controller.php?onHomePage=true');
@@ -193,8 +191,8 @@
 
                 // TODO: Display message if there are no upcoming events
                 
-                if (nextEvent === null){
-                    calendarContainer = "No upcoming events";
+                if (nextEvent === "No upcoming events."){
+                    calendarContainer.innerHTML = "No upcoming events";
                 } else {
                     eventTitle.innerHTML = nextEvent['Event_Title'];
 

@@ -4,7 +4,6 @@ include 'databaseAdaptor.php';
 
 $calendarDB = new DatabaseAdaptor();
 
-
 // If currently on the homepage, load the single next
 // event into the "calendar-container" on index.html
 if (isset($_GET['onHomePage'])){

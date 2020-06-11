@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lhsa-calendar",
+  "private_key_id": "b3f3a6e35576e3fca4a81df5a0f95f0fce6e54dd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD2upnaFdbF//hT\nYD1zqZL/7V+jdLnetF8Xretgp+e5McMvWguH0Goqbz+MQOYThcV0hCWcd/vs6jqq\nlZ+FBV6/djaKjhWBKBDKGaFnqYo/9D2ZbnCCErUiAsYxYymkQslOa5Vo2QsSxvFc\nAdNlWS9EPaHtV4jF5F7Jh8UD1elFCNO/iZ2pSXl6N//7kHpOTvUYNLH332n+jsTz\n2aE+lE+Egt+kt7rk2pPaf41sAXF5EUKEgUTKrO5Xri+FIz5oAkCXsQYXLVqc2Xap\ng4qImb3DOhoY/cCvCbgaouiwlH4PB9vL4kP1il5o33TtJGk6GM4AlDPnnDb3reQm\nwvV7KFWvAgMBAAECggEAR1A3EOx4CAHMxliOWoR8eyGin42o/aBXzfHUkzrkxMgH\n2QNnSsmoLfy6uvC1L5ZeNKfPcTLS667l5xFZKqsbMC7cY97eg1bPx4Jx/xLnZUXU\nmijsNwRuO1be7z5wtkwhgFujM0tsonBDKetTLTuCaHCCAaZn3377ELf/73RgOLXb\npn6npbCE2EDF9wQZ7dU/RWhAk4JesdCUqc1lNcudY2dGnrS9BhvQq4NYMwn06Azt\n4VojBtlXTNYURY8wAzcwA4Sxfi2Q1eYNzjSDEBt1ZAY0gtx/m6enPpB9ANQAqM90\n3W8HI+YfQJ1/rgNAEDDyCmPnS6ZIQxb9pdiuyHdFkQKBgQD+lyIe3sc+H2YzkgsR\n1nFix+gz8P80DPLvgfsMwC4TPGyRBBF7nM723Fr1Z1nOXvSBPpM0QgdpLlXptlgj\nJO9Srk86DKKsqgPp1NoTRv0CYqddkMjCdDvY0zYvsYLvRVkUDNPfHosY4qbx1Zwp\n4d21mkBtmmSyDxJVJLlUdyxv3wKBgQD4GFMWGjjk/i6lwa6/+5i2nJvLzLyfwq6v\n2Uu3hxkt+eVznEXIo5M2/mZHUUKYmCURP6iwaVeBVaCBtZUdYNt9SrYUoTcLV3Hq\n+ETD2vf7gRFVdlIAp0u1NIV6/nJj0huF4mzjCj2sUdyizcHOFiM9KxmvuYx5GT5D\npWW+HEaUMQKBgDIF5hlksoddSgqF/pDRrtO27cQO7UX/6VfwFTDrLeJvs/FGeFzu\ncagFogWn+fhXpfkjH29cLfKXvR+/yU+WeUOopj6Erw34Fe7C+Npiz2HBmpsC0L+M\ncRnoXjQ+z7hNyvPqlVK4wKHyHtVToGyGSbbeCRzAAlsOJQ7/uT6EcAHHAoGBAN50\nkSukX5eVAybFwHeMlaZITroy3n8yBYjQAsCRdtZu2HsNiNUbNwl8myEfj+NbqQEK\nX6uvCTODH+SueQJasvRpZVKiK8UTp6XU73Peh7UQSgajjWvgllXovjdGqDMxVlR6\nbsA1ko9M59VjQYAVAYv7dZDHg1midN4bFFue5vpBAoGAWQEY0QV2S+ZKqlmED4RC\nkmbkRe6agtIBMrnsxK8nhmXas/T7PWtuhlZFO+ZjKhS9/1naixLwPSGgh6pZrB0S\n7duOQFVDtQi39Ju3odWhNA/7D0e/SXBSefBs/BAXcEnB4YOBdgFCHz/2kTp628s4\nLXnMGVQK0nxKPJY3gXjLVfg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "lhsa-834@lhsa-calendar.iam.gserviceaccount.com",
+  "client_id": "102674279331760778074",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/lhsa-834%40lhsa-calendar.iam.gserviceaccount.com"
+}

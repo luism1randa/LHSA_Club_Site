@@ -57,18 +57,33 @@ if(isset($_GET['nextEvent'])){
 }
 
 if (isset($_GET['allNextEvents'])){
+
+    // TODO: test
+
+    if (count($results['items']) == 0){
+        echo 'No upcoming events.';
+    } else {
     
-    $eventList = array();
-    for ($i=0; $i < count($results['items']); $i++) { 
-        $event = array(
-            'summary' => $results['items'][$i]['summary'],
-            'start' => $results['items'][$i]['start']['dateTime'],
-            'end' => $results['items'][$i]['end']['dateTime'],
-            'location' => $results['items'][$i]['location'],
-            'description' => $results['items'][$i]['description'],
-        );
-        $eventList[$i] = $event;
-    };
+        $eventList = array();
+        for ($i=0; $i < count($results['items']); $i++) { 
+
+            $start = $results['items'][$i]['start']['dateTime'];
+            $end = $results['items'][$i]['end']['dateTime'];
+            $dateTime = parseDateTime($start, $end);
+
+            $event = array(
+                'summary' => $results['items'][$i]['summary'],
+                'month' => $dateTime['month'],
+                'day' => $dateTime['day'],
+                'start' => $dateTime['startTime'],
+                'end' => $datTime['endTime'],
+                'location' => $results['items'][$i]['location'],
+                'description' => $results['items'][$i]['description'],
+            );
+
+            $eventList[$i] = $event;
+        };
+    }
 }
 
 function parseDateTime($start, $end){
@@ -83,7 +98,6 @@ function parseDateTime($start, $end){
      * 
      * @return array an array containing all the details of the event
      */
-
 
     // extract start time
     $startHour = substr($start, 11, 2);

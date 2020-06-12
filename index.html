@@ -68,14 +68,14 @@
     <section class="content-section" >
         <h2>Our Latest Event</h2>
 
-        <div class="calendar-container" id="calendar-container">
+        <div class="calendar-container" id="events">
             <div class="event-title" id="event-title">
                 
             </div>
 
             <div class="date-container">
-                <div class="month" id="month">Sept</div>
-                <div class="day" id="day">20</div>
+                <div class="month" id="month"></div>
+                <div class="day" id="day"></div>
             </div>
 
             <div class="time-location">
@@ -88,8 +88,9 @@
                 <div class="description" id="description">
                 </div>
             </div>
-           
         </div>
+
+        <div class="no-events-container" id="no-events"></div>
     </section>
 
     <section class="section-break">
@@ -170,7 +171,8 @@
     </footer>
 
     <script>
-        var calendarContainer = document.getElementById("calendar-container");
+        let calendarContainer = document.getElementById("events");
+        let noEventsContainer = document.getElementById('no-events');
         var eventTitle = document.getElementById("event-title");
         var month = document.getElementById("month");
         var day = document.getElementById("day");
@@ -185,8 +187,18 @@
         ajax.onreadystatechange = function() {
             if (ajax.readyState === 4 && ajax.status === 200) {
 
+                console.log(ajax.responseText);
+                
+                // An array containing the details for the next event
                 let nextEvent = JSON.parse(ajax.responseText);
 
+                console.log(nextEvent);
+
+                if (nextEvent == 'No upcoming events.') {
+                    calendarContainer.style.display = 'none';
+                    noEventsContainer.style.display = 'block';
+                    noEventsContainer.innerHTML= 'No upcoming events.'
+                }
             }
         };
         

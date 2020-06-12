@@ -37,7 +37,7 @@ $results = $service->events->listEvents($calendarId, $options);
 if(isset($_GET['nextEvent'])){
 
     if (count($results['items']) == 0){
-        echo 'No upcoming events.';
+        echo json_encode('No upcoming events.');
     } else {
 
         $start = $results['items'][0]['start']['dateTime'];
@@ -53,6 +53,8 @@ if(isset($_GET['nextEvent'])){
             'location' => $results['items'][0]['location'],
             'description' => $results['items'][0]['description'],
         );
+
+        echo json_encode($nextEvent);
     }   
 }
 

@@ -179,31 +179,14 @@
         var description = document.getElementById("description");
 
         let ajax = new XMLHttpRequest();
-        ajax.open('GET', 'includes/controller.php?onHomePage=true');
+        ajax.open('GET', 'includes/calendar-plugin.php?nextEvent=true');
         ajax.send();
 
         ajax.onreadystatechange = function() {
             if (ajax.readyState === 4 && ajax.status === 200) {
 
-                console.log(ajax.responseText);
-
                 let nextEvent = JSON.parse(ajax.responseText);
 
-                // TODO: Display message if there are no upcoming events
-                
-                if (nextEvent === "No upcoming events."){
-                    calendarContainer.innerHTML = "No upcoming events";
-                } else {
-                    eventTitle.innerHTML = nextEvent['Event_Title'];
-
-                    dateComponents = nextEvent['Date'].split(" ");
-                    month.innerHTML = dateComponents[0].substring(0, 3);
-                    day.innerHTML = dateComponents[1];
-
-                    time.innerHTML = "<b>Time</b>: " + nextEvent['Time_Begin'] + " - " + nextEvent['Time_End'];
-                    locat.innerHTML = "<b>Location</b>: " + nextEvent['Location'];
-                    description.innerHTML = nextEvent['Description'];
-                }
             }
         };
         

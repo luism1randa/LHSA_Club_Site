@@ -16,6 +16,10 @@
     color: gray;
 }
 
+.calendar-icons{
+    width: 15px;
+}
+
 /******************************************/
 /*            Date Badge Styling          */
 /******************************************/
@@ -56,7 +60,7 @@
     grid-column-end: 3;
 }
 
-.description {
+.description-container {
     grid-column-start: 2;
     grid-column-end: 3;
     margin-top: 10px;

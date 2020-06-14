@@ -79,18 +79,24 @@
 
             <div class="time-location">
                 <div id="time-container">
-                    <span id="start-label"><b>Time: </b></span>
+                    <span id="time-label">
+                        <b>Time: </b>
+                    </span>
                     <span id="start"></span> 
                     <span> - </span>
                     <span id="end"></span>
                 </div>
 
                 <div id="location-container">
-                    <span><b>Location: </b></span>
+                    <span>
+                        <b>Location: </b>
+                    </span>
                     <span class="location" id="location"></span>
                 </div>
 
-                <div class="description" id="description"></div>
+                <div class="description-container">
+                    <span class="description" id="description"></span>
+                </div>
             </div>
         </div>
 
@@ -195,7 +201,7 @@
                 } else {
 
                     // FIXME: handle all day events
-                    // FIXME: handle recurring events
+                    // FIXME: handle recurring events?
 
                     calendarContainer.style.display = 'grid';
 

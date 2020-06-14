@@ -33,6 +33,10 @@ $options = array(
 // Results format: object['items'][i]['property']
 $results = $service->events->listEvents($calendarId, $options);
 
+$start = $results['items'][0]['start']['dateTime'];
+$end = $results['items'][0]['end']['dateTime'];
+$dateTime = parseDateTime($start, $end);
+
 // Get the the next upcoming event
 if(isset($_GET['nextEvent'])){
 
@@ -49,7 +53,7 @@ if(isset($_GET['nextEvent'])){
             'month' => $dateTime['month'],
             'day' => $dateTime['day'],
             'start' => $dateTime['startTime'],
-            'end' => $datTime['endTime'],
+            'end' => $dateTime['endTime'],
             'location' => $results['items'][0]['location'],
             'description' => $results['items'][0]['description'],
         );

@@ -69,7 +69,7 @@
         <h2>Our Latest Event</h2>
 
         <div class="calendar-container" id="events">
-            <div class="event-title" id="event-title">
+            <div class="event-title" id="title">
                 
             </div>
 
@@ -171,14 +171,15 @@
     </footer>
 
     <script>
-        let calendarContainer = document.getElementById("events");
-        let noEventsContainer = document.getElementById('no-events');
-        var eventTitle = document.getElementById("event-title");
-        var month = document.getElementById("month");
-        var day = document.getElementById("day");
-        var time = document.getElementById("time");
-        var locat = document.getElementById("location");
-        var description = document.getElementById("description");
+        const calendarContainer = document.getElementById("events");
+        const noEventsContainer = document.getElementById('no-events');
+
+        const eventTitle = document.getElementById("title");
+        const month = document.getElementById("month");
+        const day = document.getElementById("day");
+        const time = document.getElementById("time");
+        const locat = document.getElementById("location");
+        const description = document.getElementById("description");
 
         let ajax = new XMLHttpRequest();
         ajax.open('GET', 'includes/calendar-plugin.php?nextEvent=true');
@@ -186,18 +187,25 @@
 
         ajax.onreadystatechange = function() {
             if (ajax.readyState === 4 && ajax.status === 200) {
-
-                console.log(ajax.responseText);
                 
                 // An array containing the details for the next event
                 let nextEvent = JSON.parse(ajax.responseText);
-
-                console.log(nextEvent);
 
                 if (nextEvent == 'No upcoming events.') {
                     calendarContainer.style.display = 'none';
                     noEventsContainer.style.display = 'block';
                     noEventsContainer.innerHTML= 'No upcoming events.'
+                } else {
+
+                    // TODO: Handle empty fields case
+                    // if field is empty hide the container
+
+                    eventTitle.innerHTML = nextEvent['summary'];
+                    month.innerHTML = nextEvent['month'];
+                    day.innerHTML = nextEvent['day'];
+                    time.innerHTML = "<b>Time: </b>" + nextEvent['start'] + " - " + nextEvent['end'];
+                    locat.innerHTML = "<b>Location: </b>" + nextEvent['location'];
+                    description.innerHTML = nextEvent['description'];
                 }
             }
         };

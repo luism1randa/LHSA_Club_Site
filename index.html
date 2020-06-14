@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="calendar.css">
     
-    <title>Latinx Health Student Assoc.</title>
+    <title>Latinx Health Student Association</title>
 </head>
 
 <body>
@@ -68,10 +68,9 @@
     <section class="content-section" >
         <h2>Our Latest Event</h2>
 
+        <!-- calendar is hidden by default -->
         <div class="calendar-container" id="events">
-            <div class="event-title" id="title">
-                
-            </div>
+            <div class="event-title" id="summary"></div>
 
             <div class="date-container">
                 <div class="month" id="month"></div>
@@ -79,14 +78,19 @@
             </div>
 
             <div class="time-location">
-                <div class="time" id="time">
+                <div id="time-container">
+                    <span id="start-label"><b>Time: </b></span>
+                    <span id="start"></span> 
+                    <span> - </span>
+                    <span id="end"></span>
                 </div>
 
-                <div class="location" id="location">
+                <div id="location-container">
+                    <span><b>Location: </b></span>
+                    <span class="location" id="location"></span>
                 </div>
 
-                <div class="description" id="description">
-                </div>
+                <div class="description" id="description"></div>
             </div>
         </div>
 
@@ -171,15 +175,8 @@
     </footer>
 
     <script>
-        const calendarContainer = document.getElementById("events");
+        const calendarContainer = document.getElementById('events');
         const noEventsContainer = document.getElementById('no-events');
-
-        const eventTitle = document.getElementById("title");
-        const month = document.getElementById("month");
-        const day = document.getElementById("day");
-        const time = document.getElementById("time");
-        const locat = document.getElementById("location");
-        const description = document.getElementById("description");
 
         let ajax = new XMLHttpRequest();
         ajax.open('GET', 'includes/calendar-plugin.php?nextEvent=true');
@@ -188,29 +185,45 @@
         ajax.onreadystatechange = function() {
             if (ajax.readyState === 4 && ajax.status === 200) {
                 
-                // An array containing the details for the next event
+                // An object containing the details for the next event
                 let nextEvent = JSON.parse(ajax.responseText);
+                console.log(nextEvent);
 
-                if (nextEvent == 'No upcoming events.') {
-                    calendarContainer.style.display = 'none';
+                if (nextEvent === 'No upcoming events.') {
                     noEventsContainer.style.display = 'block';
                     noEventsContainer.innerHTML= 'No upcoming events.'
                 } else {
 
-                    // TODO: Handle empty fields case
-                    // if field is empty hide the container
+                    // FIXME: handle all day events
+                    // FIXME: handle recurring events
 
-                    eventTitle.innerHTML = nextEvent['summary'];
-                    month.innerHTML = nextEvent['month'];
-                    day.innerHTML = nextEvent['day'];
-                    time.innerHTML = "<b>Time: </b>" + nextEvent['start'] + " - " + nextEvent['end'];
-                    locat.innerHTML = "<b>Location: </b>" + nextEvent['location'];
-                    description.innerHTML = nextEvent['description'];
+                    calendarContainer.style.display = 'grid';
+
+                    // Take object parsed from JSON and extract keys and values
+                    // into an array for easier handling
+                    const keys = Object.keys(nextEvent);
+                    const values = Object.values(nextEvent);
+
+                    // If event is all-day hide the time container
+                    // Google calendar does not allow just a start or end time
+                    // so no need to worry about that case.
+                    const dayIndex = keys.indexOf('day');
+                    if (values[dayIndex] === false) {
+                        document.getElementById('time-container').style.display = 'none';
+                    }
+
+                    for (let i = 0; i < values.length; i++) {
+
+                        // If any fields are null don't display data for them
+                        if (values[i] != null) {
+                            const divToChange = document.getElementById(keys[i])
+                            divToChange.innerHTML = nextEvent[keys[i]];
+                        }
+                    }
                 }
             }
         };
         
     </script>
-
 </body>
 </html>

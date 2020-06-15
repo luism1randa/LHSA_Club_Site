@@ -1,16 +1,24 @@
 /******************************************/
-/*             Footer Styling             */
+/*       General Container Styling        */
 /******************************************/
 
 .calendar-container {
-    display: grid;
-    grid-template-columns: 90px auto auto auto;
+    display: none;
+    grid-template-columns: 90px auto;
     grid-template-rows: auto auto;
-
-    /* Dev Purposes */
     grid-gap: 20px;
 }
 
+.no-events-container{
+    display: none;
+    padding: 20px;
+    text-align: center;
+    color: gray;
+}
+
+.calendar-icons{
+    width: 15px;
+}
 
 /******************************************/
 /*            Date Badge Styling          */
@@ -40,7 +48,7 @@
 
 .event-title {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 3;
     font-size: 22px;
     font-weight: 500;
     padding-bottom: 10px;
@@ -49,10 +57,12 @@
 
 .time-location {
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 3;
 }
 
-.description {
+.description-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
     margin-top: 10px;
     text-align: justify;
 }

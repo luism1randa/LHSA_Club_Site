@@ -82,7 +82,7 @@ if (isset($_GET['allNextEvents'])){
                 'month' => $dateTime['month'],
                 'day' => $dateTime['day'],
                 'start' => $dateTime['startTime'],
-                'end' => $datTime['endTime'],
+                'end' => $dateTime['endTime'],
                 'location' => $results['items'][$i]['location'],
                 'description' => $results['items'][$i]['description'],
             );

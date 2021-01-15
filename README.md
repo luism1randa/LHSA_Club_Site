@@ -4,6 +4,7 @@ Website for the Latinx Health Student Association. LHSA is a club at the Univers
 
 # What I Learned
 
-- Buidling a full stack website using HTML, CSS, Javascript and PHP
-- Using the Model-View-Controller framework for building sites
-- Using PHP to access a Google Calendar feed via Oauth authentication
+- Build a full stack website using HTML, CSS, Javascript and PHP
+- Use the Model-View-Controller framework for building sites
+
+- Use PHP to access a Google Calendar feed via Oauth authentication

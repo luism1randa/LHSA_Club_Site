@@ -50,57 +50,38 @@
 
         <!-- Gallery -->
 
+
         <div class="gallery-container">
-            <!-- Main slides -->
-            <div class="gallery-slide">
-                <div class="slide-number">1/3</div>
-                <img src="/LHSA/Assets/photos/img001.jpg" style="width:100%">
-
-                <!-- TODO: create css for gallery -->
+            <!-- Row 1 -->
+            <div class="display-slide">
+                <!-- <img src="/LHSA/Assets/photos/img001.jpg" alt=""> -->
 
             </div>
 
-            <div class="gallery-slide">
-                <div class="slide-number">2/3</div>
-                <img src="/LHSA/Assets/photos/img002.jpeg" style="width:100%">
+            <!-- TODO: add caption to main slide -->
 
-                <!-- TODO: create css file for gallery -->
+            <!-- Row 2 -->
+            <div class="carousel-container">
+                <div class="carousel-thumbnail">
+                    <!-- <img class="thumbnail" src="/LHSA/Assets/photos/img001.jpg" alt=""> -->
+                </div>
 
+                <div class="carousel-thumbnail">
+                    <!-- <img class="thumbnail" src="/LHSA/Assets/photos/img002.jpeg" alt=""> -->
+                </div>
+
+                <div class="carousel-thumbnail">
+                    <!-- <img class="thumbnail" src="/LHSA/Assets/photos/img003.jpeg" alt=""> -->
+                </div>
+
+                <div class="carousel-thumbnail">
+                    <!-- <img class="thumbnail" src="/LHSA/Assets/photos/img003.jpeg" alt=""> -->
+                </div>
             </div>
 
-            <div class="gallery-slide">
-                <div class="slide-number">3/3</div>
-                <img src="/LHSA/Assets/photos/img003.jpeg" style="width:100%">
-
-                <!-- TODO: create css file for gallery -->
-
-            </div>
-
-            <a class="previous" onclick="nextSlides(-1)"> Previous </a>
-            <a class="next" onclick="nextSlides(1)"> Next </a>
 
         </div>
-
-        <!-- Caption container -->
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-
-        <!-- Thumbnails -->
-        <div class="thumbnails-container">
-            <div class="thumbnail">
-                <img class="thumbnail-target thumb-cursor" src="/LHSA/Assets/photos/img001.jpg" onclick="setCurrentSlide(1)" style="width:100%" alt="image 1">
-            </div>
-
-            <div class="thumbnail">
-                <img class="thumbnail-target thumb-cursor" src="/LHSA/Assets/photos/img002.jpeg" onclick="setCurrentSlide(2)" style="width:100%" alt="image 2">
-            </div>
-
-            <div class="thumbnail">
-                <img class="thumbnail-target thumb-cursor" src="/LHSA/Assets/photos/img003.jpeg" onclick="setCurrentSlide(3)" style="width:100%" alt="image 3">
-            </div>
-        </div>
-
+        
     </section>
 
     <section class="section-break">
@@ -284,54 +265,7 @@
         };
 
 
-        // Gallery Control
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function nextSlide(increment) {
-            showSlides(slideIndex += increment);
-        }
-
-        function setCurrentSlide(newIndex){
-            showSlides(slideIndex = newIndex);
-        }
-
-        function showSlides(nextIndex){
-
-            var slides = document.getElementsByClassName("gallery-slides");
-            var thumbnails = document.getElementsByClassName("thumbnail-target");
-            var captionText = document.getElementById("caption");
-
-            // Reset the index when the upper bound of the slideshow is reached
-            if(nextIndex > slides.length){
-                slideIndex = 1;
-            }
-            // Reset the index when the lower bound of the slideshow is reached
-            const MIN = 1;
-            if (nextIndex < MIN) {
-                slideIndex = slides.length;
-            }
-
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            // Cycle through thumbnails and remove active class
-            for (let i = 0; i < slides.length; i++) {
-                thumbnails[i].className = thumbnails[i].className.replace(" active", "");
-            }
-
-
-            // Show current slide
-            slides[slideIndex-1].style.display = "block";
-            
-            // Make corresponding thumbnail active
-            thumbnails[slideIndex - 1].className += "active";
-
-            captionText.innerHTML = thumbnails[slideIndex - 1].alt;
-
-        }
+        
         
     </script>
 </body>

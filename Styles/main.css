@@ -21,6 +21,13 @@ body{
         color: white;
     }
 
+        @media (max-width: 700px){
+            h1 {
+                text-align: center;
+                font-size: 1.2rem;
+            }
+        }
+
     h2{ /* Used as the title for each section */
         text-align: center;
         text-transform: uppercase;
@@ -66,10 +73,13 @@ body{
 /*         Navigation Bar Styling         */
 /******************************************/
 
+    /* 700px below hide nav bar */
+
     .nav-bar {
         display: flex;
         justify-content: space-between;
         position: fixed;
+        
         
         top: 0;
         max-width: 1500px;
@@ -117,7 +127,7 @@ body{
 
     .content-section{
         background-color: white;
-        padding: 80px;
+        padding: 7vw;
         text-align: justify;
         text-justify: distribute;
     }
@@ -129,12 +139,23 @@ body{
         .hero-section{
             margin-top: 80px;
             padding: 50px;
-            height: 220px;
+            min-height: 220px;
             background-image: url(/LHSA/Assets/hero.png);
         }
 
+            .call-to-action-container{
+                display: flex;
+                justify-content: flex-end;
+                flex-wrap: wrap;
+            }
+
+            @media (max-width: 700px){
+                .call-to-action-container{
+                    justify-content: center;
+                }
+            }
+
             .callToAction {
-                float: right;
                 padding: 10px 15px;
                 margin: 15px;
                 text-decoration: none;  
@@ -171,31 +192,39 @@ body{
     /******************************************/
 
             .section-break {
-                padding: 75px;
+                padding: 7vw;
                 text-align: center;
                 background-color: #1C4B66;
             }
 
-            .break-grid-container{
-                display: grid;
-                grid-template-columns: 300px auto;
-                width: 100%;
-                max-width: 1000px;
-                margin: 0 auto;
+            .break-content{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
                 align-items: center;
             }
 
-            .break-caption { /* */
+            .break-img img {
+                max-height: 200px;
+                margin: 10px 0;
+            }
+
+                @media (max-width: 800px){
+                    .break-img img{
+                        max-height: 100px;
+                    }
+
+                }
+
+            .break-caption { 
                 text-align: center;
-                font-size: 35px;
+                font-size: 1.5em;
                 font-weight: 500;
                 color: white;
             }
 
-            .break-icon{
-                width: 200px;
-                margin: 0 auto;
-            }
+
+            
     
     /******************************************/
     /*        Resource Section Styling        */

@@ -32,9 +32,10 @@
                 <h1>Latinx Health</h1>
                 <h1>Student Association</h1>
     
-                <div>
-                    <a class="callToAction join" href="register.html" >Become a Member</a>
+                <div class="call-to-action-container">
                     <a class="callToAction learn" href="#">Learn More</a>
+                    <a class="callToAction join" href="register.html" >Become a Member</a>
+                    
                 </div>
     
             </div>
@@ -48,22 +49,16 @@
         
         <p>At LHSA we like to provide our members with everything from volunteering opportunities to hands on clinical practice in order to make them the best pre-health students possible. Check out some of our most recent activities below!</p>
 
-        <!-- Slideshow -->
-
-
         <div class="slideshow">
-                  
             
             <figure class="main-slide-container">
                 <img id="main-slide" src="Assets/photos/img00013.jpg" alt="">
-                <figcaption class="caption" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis eget eros in imperdiet. Cras pulvinar sagittis ante ac fringilla.</figcaption>
+                <!-- <figcaption class="caption" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis eget eros in imperdiet. Cras pulvinar sagittis ante ac fringilla.</figcaption> -->
             </figure>
             
-            <!-- TODO: add caption to main slide -->
-
             <div class="carousel">
 
-                <span class="slideshow-button">&#10094;</span>
+                <span class="slideshow-button" id="prev-button">&#10094;</span>
 
                 <div class="carousel-thumbs">
                     <img src="Assets/photos/img00001.jpg" alt="">
@@ -83,7 +78,7 @@
                     <img src="Assets/photos/img00015.jpg" alt="">
                 </div>
 
-                <span class="slideshow-button">&#10095;</span>
+                <span class="slideshow-button" id="next-button">&#10095;</span>
             </div>
 
 
@@ -92,15 +87,20 @@
     </section>
 
     <section class="section-break">
-        <div class="break-grid-container">
-            <img src="/LHSA/Assets/camera-icon.png" class="break-icon">
 
-            <div>
+
+        <div class="break-content">
+            <div class="break-img">
+                <img src="Assets/camera-icon.png" class="break-icon">
+            </div>
+
+            <div class="description">
                 <div class="break-caption">See more highlights from our past events</div>
-        
                 <a class="button" href="#">Go to Gallery</a>
             </div>
         </div>
+
+
     </section>
 
     <section class="content-section" >
@@ -142,14 +142,25 @@
     </section>
 
     <section class="section-break">
-        <div class="break-grid-container">
-            <img src="/LHSA/Assets/calendar-icon.png" class="break-icon">
-    
-            <div>
+
+        <div class="break-content">
+            <div class="break-img">
+                <img src="Assets/calendar-icon.png" class="break-icon">
+            </div>
+
+            <div class="description">
                 <div class="break-caption">Take a look at everything we've done</div>
                 <a class="button" href="#">Events</a>
             </div>
         </div>
+
+
+
+
+
+
+
+
     </section>
 
     <section class="content-section">
@@ -158,16 +169,17 @@
         <p>The Latinx Health Student Association is an organization built to inspire, empower, and motivate Latino students to succeed in healthcare professions such as medicine, nursing, pharmacy, and more.</p>
 
         <p>​At LHSA We thrive to empower minority students in pre-health and to help them achieve their full potential by giving them resources and opportunities to achieve success in their respective fields. In doing so, we hope to promote diversity and develop culturally competent healthcare providers that will one day help alleviate the health problems and necessities of marginalized communities.</p>
-
         
     </section>
 
     <section class="section-break">
 
-        <div class="break-grid-container">
-            <img src="/LHSA/Assets/search-icon.png" class="break-icon">
+        <div class="break-content">
+            <div class="break-img">
+                <img src="Assets/search-icon.png" class="break-icon">
+            </div>
 
-            <div>
+            <div class="description">
                 <div class="break-caption">Learn more about LHSA</div>
                 <a class="button" href="#">About</a>
             </div>
@@ -178,17 +190,24 @@
     <section class="content-section">
         <h2>We Have Resources For You</h2>
 
+
+
+
+        <div>
+            
+        </div>
+
         <div class="resource-grid-container">
             <div>
                 <a href="#">
-                    <img class="resource-thumbnail" src="/LHSA/Assets/linkThumbnails/aamcPremed.png">
+                    <img class="resource-thumbnail" src="Assets/linkThumbnails/aamcPremed.png">
                 </a>
                 <br>
                 <a href="#">AAMC Pre-Med</a>
             </div>
             <div>
                 <a href="#">
-                    <img class="resource-thumbnail" src="/LHSA/Assets/linkThumbnails/ODI.png">
+                    <img class="resource-thumbnail" src="Assets/linkThumbnails/ODI.png">
                 </a>
                 <br>
                 <a href="#">Office of Diversity & Inclusion</a>
@@ -202,24 +221,23 @@
         <div class="social-grid-container">
             <div>
                 <a href="https://www.facebook.com/LHSA.ua">
-                    <img class="social-icon" src="/LHSA/Assets/Icons/facebook-social-icon.png">
+                    <img class="social-icon" src="Assets/Icons/facebook-social-icon.png">
                 </a>
             </div>
             <div>
                 <a href="https://www.instagram.com/lhsaua/">
-                    <img class="social-icon" src="/LHSA/Assets/Icons/instagram-social-icon.png">
+                    <img class="social-icon" src="Assets/Icons/instagram-social-icon.png">
                 </a>
             </div>
             <div>
                 <a href="mailto:lhsaua@gmail.com">
-                    <img class="social-icon" src="/LHSA/Assets/Icons/email-social-icon.png">
+                    <img class="social-icon" src="Assets/Icons/email-social-icon.png">
                 </a>
             </div>
         </div>
     </footer>
 
     <script>
-
 
         // Calendar Control
 
@@ -271,9 +289,6 @@
                 }
             }
         };
-
-
-        
         
     </script>
 </body>

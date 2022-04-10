@@ -1,57 +1,72 @@
+/********************************************/
+/*             Slideshow Theme              */
+/********************************************/
 
-/******************************************/
-/*             Gallery Theme              */
-/******************************************/
 
 
-/* 3 x 2 grid  */
-.gallery-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 600px 100px;
-  border: solid 10px red;
+#main-slide {
+	display: block;
+	max-width: 100%;
+	min-width: 200px;
+	
+	max-height: 500px;
 
-  /* grid-template-areas: 
-    "display-slide      display-slide      display-slide"
-    "carousel-container carousel-container carousel-container"
-  ; */
+	border-radius: 5px 5px 0 0;
 
+	margin: 0 auto;
+}
+
+#caption{
+
+	color: white;
+	background-color: rgba(52, 73, 94);
+}
+
+.carousel {
+	height: 100px;
+	min-width: 200px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.carousel-thumbs{
+	display: flex;
+	overflow-x: scroll;
+	border-radius: 5px;
+}
+
+.carousel-thumbs img{
+	max-height: 100px;
+}
+
+.carousel-thumbs img:hover {
+	cursor: pointer;
 }
 
 
-.display-slide {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 2;
+.slideshow-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-  border: solid 5px blue;
+	min-width: 40px;
+	height: 40px;
+	
+	color: rgb(52, 73, 94);
+	background-color: white;
+	border-radius: 50%;
+	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+	margin: 0 15px;
 }
 
-.carousel-container {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 2;
-  grid-row-end: -1;
+.slideshow-button:hover{
+	color: white;
+	background-color: rgb(52, 73, 94);
+	cursor: pointer;
 
-  border: solid 5px green;
-
-  display: grid;
-  grid-template-columns: auto auto auto auto;
 }
-
-.carousel-thumbnail {
-  border: solid 3px pink;
-}
-
-
-
-
-
-
-
-
-
-
 
 

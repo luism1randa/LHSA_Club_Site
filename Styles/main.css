@@ -67,8 +67,10 @@ body{
 /******************************************/
 
     .nav-bar {
-        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
         position: fixed;
+        
         top: 0;
         max-width: 1500px;
         width: 100%;
@@ -84,7 +86,8 @@ body{
         }
 
         .nav-links {
-            float: right;
+            display: flex;
+            align-items: center;
             margin: 17.5px 10px;
         }
 
@@ -93,7 +96,6 @@ body{
     /******************************************/
 
         .nav-links a {
-            float: left;
             padding: 13px 16px;
             font-weight: 500;
             color: #1A3146;

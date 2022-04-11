@@ -101,6 +101,14 @@ body{
             margin: 17.5px 10px;
         }
 
+        @media (max-width: 700px){
+            .nav-links {
+                display: none;
+            }
+
+            
+        }
+
     /******************************************/
     /*         Navigation Links Styling       */
     /******************************************/
@@ -128,8 +136,6 @@ body{
     .content-section{
         background-color: white;
         padding: 7vw;
-        text-align: justify;
-        text-justify: distribute;
     }
 
     /******************************************/
@@ -138,9 +144,11 @@ body{
 
         .hero-section{
             margin-top: 80px;
-            padding: 50px;
+            padding: 7vw;
             min-height: 220px;
             background-image: url(/LHSA/Assets/hero.png);
+            background-size: cover;
+            
         }
 
             .call-to-action-container{
@@ -176,7 +184,7 @@ body{
             }
             
             .callToAction.join {
-                margin: 15px 0 15px 15px;
+                margin: 15px 15px 15px 15px;
                 border: 2px solid #143148;
                 background-color: white;
                 color: #143148;
@@ -230,26 +238,31 @@ body{
     /*        Resource Section Styling        */
     /******************************************/
 
-        .resource-grid-container{
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto;
-            width: 100%;
-            max-width: 1000px;
-            margin: 20px auto;
+        .resource-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             text-align: center;
         }
 
-            .resource-thumbnail{
-                width: 400px;
+        .resource-container img {
+            max-width: 400px;
+            
+        }
+
+            @media (max-width: 500px){
+                .resource-container img {
+                    max-width: 200px;
+                }
             }
+
+            
 
 /******************************************/
 /*             Footer Styling             */
 /******************************************/
 
     footer {
-        height: 150px;
         padding: 30px;
         text-align: center;
         color: white;
@@ -264,11 +277,10 @@ body{
     /*      Social Media Icons Styling        */
     /******************************************/
 
-        .social-grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto;
-            width: 400px;
+        .social-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
             margin: 40px auto 10px auto;
         }
 

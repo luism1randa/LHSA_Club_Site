@@ -146,7 +146,8 @@ body{
             margin-top: 80px;
             padding: 7vw;
             min-height: 220px;
-            background-image: url(/LHSA/Assets/hero.png);
+            /* background-image: url(/LHSA/Assets/hero.png); */
+            background-image: url(../Assets/hero.png);
             background-size: cover;
             
         }

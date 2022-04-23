@@ -5,7 +5,7 @@
 
     .hero-section.register-hero {
         background-color: #143148;
-        background-image: url(/LHSA/Assets/register-hero.jpg);
+        background-image: url(../Assets/register-hero.jpg);
         background-position: center;
     }
 
@@ -25,29 +25,37 @@
 /*            Perks-Grid Styling          */
 /******************************************/
 
-    .perks-grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
-        grid-column-gap: 40px;
-        width: 100%;
-        max-width: 1000px;
-        margin: 40px auto;
-        text-align: center;
-    }
 
-        .perk-description {
-            text-align: justify;
-        }
+.perks-grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 5%;
+    margin: 7vw 7vw;
+
+}
+
+.perks-grid-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.perks-grid-container div img {
+    width: 50px;
+
+}
+
+
 
 /******************************************/
 /*       Registration-Form Styling        */
 /******************************************/
 
     .form-container {
-        margin: 0 auto;
+        margin: 40px auto;
         padding: 40px;
-        width: 500px;
+        max-width: 500px;
         border: 0px rgba(0, 0, 0, 0.685);
         border-radius: 30px;
         box-shadow: 1px 1px 5px rgba(26, 49, 70, 0.274);
@@ -69,3 +77,4 @@
             background-color: #1A3146;
             border-radius: 50px;
         }
+

@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="nav-bar">
-            <img class="nav-logo" src="Assets/logo.png">
+            <img class="nav-logo" src="Assets/lhsa_graphics/logo.svg">
             
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -89,15 +89,16 @@
     <section class="section-break">
 
 
-        <div class="break-content">
-            <div class="break-img">
-                <img src="Assets/camera-icon.png" class="break-icon">
-            </div>
-
-            <div class="description">
-                <div class="break-caption">See more highlights from our past events</div>
+        <div class="card">
+            
+            <img src="Assets/Illustrations/undraw_camera_re_cnp4.svg" alt="">
+            
+            <span class="card-blurb">
+                <h3>Check out all the highlights from our previous events</h3>
+                <p>We like to show off our members' accomplishments and undertakings. Our club members are always taking photos at our events so you know exactly what we've been up to.</p>
                 <a class="button" href="#">Go to Gallery</a>
-            </div>
+            </span>
+
         </div>
 
 
@@ -143,23 +144,17 @@
 
     <section class="section-break">
 
-        <div class="break-content">
-            <div class="break-img">
-                <img src="Assets/calendar-icon.png" class="break-icon">
-            </div>
+        <div class="card">
+            
+            <img src="Assets/Illustrations/undraw_shared_goals_re_jvqd.svg" alt="">
+            
+            <span class="card-blurb">
+                <h3>Have a look at everything we've done so far</h3>
+                <p>Clinics, national conferences, medical school panels, volunteering and so much more. Go see the types of opportunities you could have by joining us.</p>
+                <a class="button" href="#">Go to Events</a>
+            </span>
 
-            <div class="description">
-                <div class="break-caption">Take a look at everything we've done</div>
-                <a class="button" href="#">Events</a>
-            </div>
         </div>
-
-
-
-
-
-
-
 
     </section>
 
@@ -174,24 +169,23 @@
 
     <section class="section-break">
 
-        <div class="break-content">
-            <div class="break-img">
-                <img src="Assets/search-icon.png" class="break-icon">
-            </div>
+        <div class="card">
+            
+            <img src="Assets/Illustrations/undraw_about_us_page_re_2jfm.svg" alt="">
+            
+            <span class="card-blurb">
+                <h3>Learn more about the team behind LHSA</h3>
+                <p>Our board members come from diverse backgrounds and are all dedicated to helping our fellow Latinx students achieve their goals.</p>
+                <a class="button" href="#">Go to About</a>
+            </span>
 
-            <div class="description">
-                <div class="break-caption">Learn more about LHSA</div>
-                <a class="button" href="#">About</a>
-            </div>
         </div>
+
 
     </section>
 
     <section class="content-section">
         <h2>We Have Resources For You</h2>
-
-
-
 
         <div class="resource-container">
             
@@ -214,6 +208,22 @@
         </div>
 
         
+    </section>
+
+    <section class="section-break">
+
+        <div class="card">
+            
+            <img src="Assets/Illustrations/undraw_searching_re_3ra9.svg" alt="">
+            
+            <span class="card-blurb">
+                <h3>We looked for pre-health resources so you don't have to</h3>
+                <p>We know how overwhelming it can be to navigate all the available tools and resources for pre-health students on and off campus. We look the through all the available scholarhips, internships, and opportunities to narrow the list down for you. Our connections with Pre-Health advising and the College of Medicine always keep us up to date with what's new.</p>
+                <a class="button" href="#">Go to Resources</a>
+            </span>
+
+        </div>
+
     </section>
 
     <footer>
@@ -258,7 +268,7 @@
 
                 if (nextEvent === 'No upcoming events.') {
                     noEventsContainer.style.display = 'block';
-                    noEventsContainer.innerHTML= 'No upcoming events.'
+                    noEventsContainer.innerHTML= 'There are currently no upcoming events. Stay tuned for more to come.'
                 } else {
 
                     // FIXME: handle all day events

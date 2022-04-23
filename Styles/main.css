@@ -21,6 +21,7 @@ body{
         color: white;
     }
 
+        /* Change font size for screens below 700px */
         @media (max-width: 700px){
             h1 {
                 text-align: center;
@@ -36,11 +37,11 @@ body{
         margin: 5px;
     }
 
-    h3{ /* */
-        text-align: center;
-        font-size: 50px;
-        font-weight: 900;
-        color: white;
+    h3{ 
+        /* text-align: center; */
+        font-size: 20px;
+        /* font-weight: 900; */
+        color: #35668A;
     }
 
     a {
@@ -51,7 +52,7 @@ body{
 
     .button {
         display: block;
-        width: 100px;
+        width: 120px;
         padding: 8px 12px;
         margin: 18px auto; 
         text-align: center;
@@ -73,13 +74,10 @@ body{
 /*         Navigation Bar Styling         */
 /******************************************/
 
-    /* 700px below hide nav bar */
-
     .nav-bar {
         display: flex;
         justify-content: space-between;
         position: fixed;
-        
         
         top: 0;
         max-width: 1500px;
@@ -95,23 +93,15 @@ body{
             height: 40px;
         }
 
+    /******************************************/
+    /*         Navigation Links Styling       */
+    /******************************************/
+
         .nav-links {
             display: flex;
             align-items: center;
             margin: 17.5px 10px;
         }
-
-        @media (max-width: 700px){
-            .nav-links {
-                display: none;
-            }
-
-            
-        }
-
-    /******************************************/
-    /*         Navigation Links Styling       */
-    /******************************************/
 
         .nav-links a {
             padding: 13px 16px;
@@ -129,11 +119,23 @@ body{
             color: white;
         }
 
+        /* 700px below hide nav bar */
+        @media (max-width: 700px){
+            .nav-links {
+                display: none;
+            }
+
+            
+        }
+
+        
+
 /******************************************/
 /*             Section Styling            */
 /******************************************/
 
     .content-section{
+        /* background-color: #FAF9F6; */
         background-color: white;
         padding: 7vw;
     }
@@ -146,7 +148,6 @@ body{
             margin-top: 80px;
             padding: 7vw;
             min-height: 220px;
-            /* background-image: url(/LHSA/Assets/hero.png); */
             background-image: url(../Assets/hero.png);
             background-size: cover;
             
@@ -173,25 +174,25 @@ body{
                 font-weight: 600;
             }
 
-            .callToAction.learn {
+            .learn {
                 border: 2px solid #143148; 
                 background-color: #143148;
                 color: white;
             }
             
-            .callToAction.learn:hover{
+            .learn:hover{
                 background-color: white;
                 color: #143148;
             }
             
-            .callToAction.join {
+            .join {
                 margin: 15px 15px 15px 15px;
                 border: 2px solid #143148;
                 background-color: white;
                 color: #143148;
             }
             
-            .callToAction.join:hover{
+            .join:hover{
                 background-color: #143148;
                 color: white;
             }
@@ -201,36 +202,56 @@ body{
     /******************************************/
 
             .section-break {
+                background-color: #215076;
                 padding: 7vw;
                 text-align: center;
-                background-color: #1C4B66;
+                box-shadow: 
+                    inset 0px 20px 20px -20px black, 
+                    inset 0px -20px 20px -20px black;            
             }
 
-            .break-content{
+            .card{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
+                border-radius: 40px;
+
+                background-color: white;
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.173);
+                padding: 4vw;
+                min-height: 300px;
+                
             }
 
-            .break-img img {
-                max-height: 200px;
-                margin: 10px 0;
+            .card-blurb{
+                display: block;
+                max-width: 400px;
+                text-align: left;
             }
 
-                @media (max-width: 800px){
-                    .break-img img{
-                        max-height: 100px;
-                    }
+            .card img{
+                max-width: 300px;
+                margin: 10px;
+            }
 
+            @media (max-width: 700px){
+
+                .section-break{
+                    padding-top: 15vw;
+                    padding-bottom: 15vw;
                 }
 
-            .break-caption { 
-                text-align: center;
-                font-size: 1.5em;
-                font-weight: 500;
-                color: white;
+                .card {
+                    padding: 30px;
+                }
+                .card img {
+                    max-width: 200px;
+                    margin: 30px 0;
+                }
             }
+
+            
 
 
             
@@ -244,20 +265,19 @@ body{
             flex-wrap: wrap;
             justify-content: space-around;
             text-align: center;
+
+            margin: 20px 0;
         }
 
         .resource-container img {
             max-width: 400px;
-            
         }
 
             @media (max-width: 500px){
                 .resource-container img {
-                    max-width: 200px;
+                    max-width: 300px;
                 }
             }
-
-            
 
 /******************************************/
 /*             Footer Styling             */

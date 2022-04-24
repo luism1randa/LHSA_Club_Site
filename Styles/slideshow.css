@@ -2,76 +2,94 @@
 /*             Slideshow Theme              */
 /********************************************/
 
+	.main-slide-container{
+		margin: 0;
+		
+	}
+
+	#main-slide {
+		display: block;
+		box-sizing: border-box;
+		max-width: 100%;
+		max-height: 500px;
+
+		margin: 40px auto;
+		border-radius: 10px;
+		border: 12px solid rgb(255, 255, 255);
+		box-shadow: 
+			rgba(0, 0, 0, 0.12) 0px 1px 3px,
+			rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+			
+	}
 
 
-#main-slide {
-	display: block;
-	max-width: 100%;
-	min-width: 200px;
-	
-	max-height: 500px;
+	/********************************************/
+	/*             Carousel Styling             */
+	/********************************************/
 
-	border-radius: 5px 5px 0 0;
+		.carousel {
+			height: 100px;
+			min-width: 200px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
 
-	margin: 0 auto;
-}
+			
+		}
 
+		.carousel-thumbs{
+			display: flex;
+			overflow-x: scroll;
+			border-radius: 5px;
 
+			border-radius: 10px;
+			border: 12px solid rgb(255, 255, 255);
+			box-shadow: 
+				rgba(0, 0, 0, 0.12) 0px 1px 3px,
+				rgba(0, 0, 0, 0.24) 0px 1px 2px;
+		}
 
-.carousel {
-	height: 100px;
-	min-width: 200px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 20px;
-}
+		.carousel-thumbs img{
+			max-height: 100px;
+		}
 
-.carousel-thumbs{
-	display: flex;
-	overflow-x: scroll;
-	border-radius: 5px;
-}
-
-.carousel-thumbs img{
-	max-height: 100px;
-}
-
-.carousel-thumbs img:hover {
-	cursor: pointer;
-}
+		.carousel-thumbs img:hover {
+			cursor: pointer;
+		}
 
 
-.slideshow-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+		.slideshow-button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-	min-width: 40px;
-	height: 40px;
-	
-	color: rgb(52, 73, 94);
-	background-color: white;
-	border-radius: 50%;
-	box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
-	
-}
+			min-width: 40px;
+			height: 40px;
+			
+			color: rgb(52, 73, 94);
+			background-color: white;
+			border-radius: 50%;
+			box-shadow: 0 5px 10px 0 rgba(0,0,0,0.3);
+			
+		}
 
-.slideshow-button:hover{
-	color: white;
-	background-color: rgb(52, 73, 94);
-	cursor: pointer;
+		.slideshow-button:hover{
+			color: white;
+			background-color: rgb(52, 73, 94);
+			cursor: pointer;
 
-}
+		}
 
+		#next-button{
+			margin-left: 15px;
+		}
 
-#next-button{
-	margin-left: 15px;
-}
+		#prev-button{
+			margin-right: 15px;
+		}
 
-#prev-button{
-	margin-right: 15px;
-}
 
 

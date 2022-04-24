@@ -128,8 +128,6 @@ body{
             
         }
 
-        
-
 /******************************************/
 /*             Section Styling            */
 /******************************************/
@@ -250,11 +248,6 @@ body{
                     margin: 30px 0;
                 }
             }
-
-            
-
-
-            
     
     /******************************************/
     /*        Resource Section Styling        */
@@ -284,28 +277,42 @@ body{
 /******************************************/
 
     footer {
-        padding: 30px;
-        text-align: center;
-        color: white;
-        background-color: #1B405E;
+        padding: 2vw 5vw;
+        background-color: #f2f2f2;
+        
     }
 
-        footer a {
-            color: #5ea8e4;
-        }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-items: center;
+    }
+
+    .footer-logo img{
+        max-height: 70px;
+        filter: saturate(0%);
+    }
+
+    .social-container {
+        text-align: center;
+    }
+
+    footer a {
+        color: #3d7eb4;
+    }
             
     /******************************************/
     /*      Social Media Icons Styling        */
     /******************************************/
 
-        .social-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 40px auto 10px auto;
-        }
 
         .social-icon {
-            width: 50px;
+            max-width: 40px;
+            margin: 0 8px;
         }
-

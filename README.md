@@ -3,7 +3,9 @@ Website for the Latinx Health Student Association. LHSA is a club at the Univers
 
 ## Feature Highlights
 
-### Google Calendar Plugin | PHP, ajax, javascript
+### Google Calendar Plugin | PHP, Javascript
 - Uses Oauth Google Calender API for autentication
 - access a google calendar feed and extracts single or multiple events 
-- display extracted event details with custom styling
+- displays extracted event details with custom styling
+
+![Screenshot of google calendar plugin displaying single event with details](screenshots/calendar_plugin.png?raw=true "Google Calendar plugin screenshot")

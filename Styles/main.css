@@ -110,12 +110,12 @@ body{
             color: #1A3146;
         }
 
-        .nav-bar a:hover {
+        .nav-link:hover{
             background-color: rgba(26, 49, 70, 0.733);
             color: white;
         }
 
-        .nav-bar a:active {
+        .nav-link:active {
             background-color: #1A3146;
             color: white;
         }

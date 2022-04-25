@@ -16,7 +16,8 @@ body{
         margin: 0px;
         text-align: right;
         text-transform: uppercase;
-        font-size: 3em;
+        /* font-size: 3em; */
+        font-size: 5vw;
         font-weight: 900;
         color: white;
     }
@@ -25,7 +26,7 @@ body{
         @media (max-width: 700px){
             h1 {
                 text-align: center;
-                font-size: 1.2rem;
+                font-size: 6vw;
             }
         }
 
@@ -157,11 +158,7 @@ body{
                 flex-wrap: wrap;
             }
 
-            @media (max-width: 700px){
-                .call-to-action-container{
-                    justify-content: center;
-                }
-            }
+            
 
             .callToAction {
                 padding: 10px 15px;
@@ -193,6 +190,17 @@ body{
             .join:hover{
                 background-color: #143148;
                 color: white;
+            }
+
+            @media (max-width: 700px){
+                .call-to-action-container{
+                    justify-content: center;
+                }
+
+                .callToAction{
+                    padding: 7px 12px;
+                    margin: 10px;
+                }
             }
 
     /******************************************/
@@ -236,8 +244,9 @@ body{
             @media (max-width: 700px){
 
                 .section-break{
-                    padding-top: 15vw;
-                    padding-bottom: 15vw;
+                    /* padding-top: 15vw;
+                    padding-bottom: 15vw; */
+                    padding: 10vw 5vw;
                 }
 
                 .card {
@@ -285,13 +294,11 @@ body{
     .footer-container {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
-        
     }
 
     .footer-logo {
         display: flex;
-        justify-items: center;
+        justify-content: center;
     }
 
     .footer-logo img{
@@ -301,6 +308,17 @@ body{
 
     .social-container {
         text-align: center;
+    }
+
+
+    @media (max-width: 700px){
+        .footer-container{
+            flex-direction: column;
+        }
+
+        .footer-logo img {
+            max-height: 50px;
+        }
     }
 
     footer a {

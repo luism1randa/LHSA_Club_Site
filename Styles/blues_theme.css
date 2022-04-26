@@ -1,0 +1,402 @@
+/******************************************/
+/*             Default Styling            */
+/******************************************/
+
+body{
+    padding: 80px 0 0 0; /* Padding ensures nav bar will not cover content on the page*/
+    margin: 0 auto; /* Content will be centered */
+    max-width: 1500px;
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+    color: #33353C;
+}
+
+:root {
+    --main-brand-color: #024B68;
+    --main-brand-color-darker: #022939;
+    --hyperlink-color: #3478b0;
+}
+
+/******************************************/
+/*            Headers and fonts           */
+/******************************************/
+
+h1 { /* Used in hero sections */
+    margin: 0px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: white;
+}
+
+    /* Change font size for screens below 700px */
+    @media (max-width: 700px){
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+    }
+
+h2 { /* Used as the heading for each section */
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-brand-color);
+    font-size: 1.2em;
+    margin: 5px;
+}
+
+h3 { /* Used as sub headings */
+    text-align: center;
+    font-size: 1em;
+    font-weight: 400;
+    color: rgb(121, 121, 121);
+    margin: 5px 0;
+}
+
+a {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+}
+
+
+/******************************************/
+/*             Section Styling            */
+/******************************************/
+
+.hero {
+    padding: 7vw;
+    min-height: 220px;
+    background-color: var(--main-brand-color);
+}
+
+section {
+    padding: 7vw;
+}
+
+/* Every other odd section is visually seperated with a different color */
+section:nth-of-type(2n):not(.breakaway-section){
+    background-color: rgb(243, 243, 243);
+
+}
+
+/* A break away section should not be adjacent to another breakaway section
+instead content that is similar should be grouped inside breakaway using 
+cards */
+.breakaway-section{
+    background-color: var(--main-brand-color);
+    color: white;
+    box-shadow: 
+        inset 0px 20px 20px -20px black, 
+        inset 0px -20px 20px -20px black; 
+}
+
+footer {
+    padding: 2vw 7vw;
+    background-color: #33353C;
+    color: white;
+}
+
+/******************************************/
+/*            Navigation Styling          */
+/******************************************/
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    
+    max-width: 1500px;
+    width: 100%;
+    height: 80px;
+
+    box-shadow: 0 5px 10px -10px;
+    background-color: white;
+}
+
+/* A single logo should be the only image in the nav bar*/
+.nav-bar img{
+    padding: 20px;
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin: 17.5px 10px;
+}
+
+.nav-links a{
+    padding: 13px;
+    color: var(--main-brand-color);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    background-color: rgba(26, 49, 70, 0.733);
+    color: white;
+}
+
+.nav-links a:active {
+    background-color: var(--main-brand-color-darker);
+    color: white;
+}
+
+/* Hide the nav bar on smaller screens */
+@media (max-width: 700px){
+    .nav-links {
+        display: none;
+    }    
+}
+
+
+/******************************************/
+/*            Custom Components           */
+/******************************************/
+
+    /******************************************/
+    /*                 Buttons                */
+    /******************************************/
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .link-button{
+        padding: 8px 20px;
+        margin: 18px 0; 
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        border: 2px solid var(--main-brand-color);
+        background-color: white;
+        color: var(--main-brand-color);
+    }
+
+    .link-button:hover {
+        background-color: var(--main-brand-color);
+        color: white;
+    }
+
+    /* Call to action buttons used in the hero section. They are expected
+    to be inside a flex container (see containers section) and positioned
+    at flex-end so that they are right aligned */
+    .call-to-action-button {
+        padding: 12px 20px;
+        margin: 12px 18px; 
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        border: 2px solid var(--main-brand-color-darker);
+        background-color: white;
+        color: var(--main-brand-color);
+    }
+
+    .call-to-action-button-alt {
+        padding: 12px 20px;
+        margin: 12px 18px; 
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        border: 2px solid var(--main-brand-color-darker);
+        background-color: var(--main-brand-color-darker);
+        color: white;
+    }
+
+    .call-to-action-button:hover{
+        background-color: var(--main-brand-color-darker);
+        color: white;
+    }
+
+    .call-to-action-button-alt:hover{
+        background-color: white;
+        color: var(--main-brand-color-darker);
+    }
+
+    /******************************************/
+    /*            Card - 2 sections           */
+    /******************************************/
+
+    /* Cards are meant to hold an image and a block of text. The block
+    includes a header, a paragraph, and a button with a link when 
+    needed. Card will display the two elements left to write on large
+    screens and top to bottom on smaller screens. */
+
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 40px;
+
+        background-color: white;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.173);
+        padding: 4vw;
+        min-height: 300px;
+
+        color: black;
+        
+    }
+
+    .card-blurb{
+        display: block;
+        max-width: 400px;
+        text-align: left;
+    }
+
+    .card-heading {
+        color: var(--main-brand-color);
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .card img{
+        max-width: 300px;
+        margin: 10px;
+    }
+
+    /* On smaller screens, reduce padding and image size */
+    @media (max-width: 700px){
+        .card {
+            padding: 30px;
+        }
+
+        .card img {
+            max-width: 200px;
+            margin: 30px 0;
+        }
+    }
+
+    /******************************************/
+    /*            Card - Team member          */
+    /******************************************/
+
+    /* The team member is meant to dispaly a bio/profile for a person. It contains
+    two main sections. The first section contains a name, picure, title, custom
+    label, and email scetion. The second text contains one or more paragraphs
+    containing the person's story. */
+
+    .team-card {
+        display: flex;
+        justify-content: space-around;
+        border-radius: 40px;
+
+        background-color: white;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.173);
+        padding: 4vw;
+        margin: 50px 0;
+        min-height: 300px;
+
+        color: black;
+    }
+
+    .team-name {
+        color: var(--main-brand-color);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .team-details p {
+        margin: 5px;
+    }
+
+    .team-bio {
+        text-align: left;
+        padding: 0 5vw;
+    }
+
+    .avatar {
+        border: 5px solid rgb(220, 220, 204);
+        border-radius: 50%;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.173);
+        max-height: 250px;
+    }
+
+/******************************************/
+/*        Responsive Containers           */
+/******************************************/
+
+    /******************************************/
+    /*            Responsive Grid             */
+    /******************************************/
+
+    /* A responsive grid that can be used for article elements 
+    in 1D or 2D. Optional styles can include a header image at 
+    the top of an article followed by an optional header 
+    paragraph and a standard paragraph. */
+
+    .grid-responsive {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 5%;
+        /* row-gap: 5%; */
+        margin: 20px 0;
+    }
+
+    .grid-responsive article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+        /******************************************/
+        /*       Optional Grid Components         */
+        /******************************************/
+
+        .grid-header-img {
+            width: 50px;
+        }
+
+        .grid-header {
+            color: black;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+    /******************************************/
+    /*           Simple Container             */
+    /******************************************/
+
+    /* A simple flex container meant to arrange content in 1D*/
+    .simple-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+
+    /* Used to make call to action buttons right aligned in the hero section */
+    .call-to-action-container {
+        justify-content: flex-end;
+    }
+
+/******************************************/
+/*            iFrame Styling              */
+/******************************************/
+
+/* iFrames will be styled to be responsive for mobile devices. */
+
+.iframe-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.iframe-container iframe{
+
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
+

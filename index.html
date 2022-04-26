@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/blues_theme.css">
+    <link rel="stylesheet" href="Styles/addtl_styles.css">
     <link rel="stylesheet" href="Styles/calendar.css">
     <link rel="stylesheet" href="Styles/slideshow.css">
     <link
@@ -23,33 +24,36 @@
             </a>
 
             <div class="nav-links">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="#">Events</a>
-                <a class="nav-link" href="about.html">About</a>
-                <a class="nav-link" href="#">Gallery</a>
-                <a class="nav-link" href="#">Resources</a>
-                <a class="nav-link" href="transport.html">Transport</a>
+                <a href="#">Events</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Resources</a>
+                <a href="transport.html">Transport</a>
             </div>
         </nav>
 
-        <section class="hero-section">
-            <div class="heroText">
-                <h1>Latinx Health</h1>
-                <h1>Student Association</h1>
+        
+        <div class="hero" id="hero-index">
+            <h1>Latinx Health</h1>
+            <h1>Student Association</h1>
 
-                <div class="call-to-action-container">
-                    <a class="callToAction learn" href="about.html">Learn More</a>
-                    <a class="callToAction join" href="register.html">Become a Member</a>
-
-                </div>
-
+            <div class="simple-container call-to-action-container">
+                <span class="button-container">
+                    <a class="call-to-action-button" href="about.html">Learn More</a>
+                </span>
+                <span class="button-container">
+                    <a class="call-to-action-button-alt" href="register.html">Become a Member</a>
+                </span>
             </div>
-        </section>
+
+        </div>
+        
     </header>
 
 
 
-    <section class="content-section">
+    <section>
         <h2>What have we been up to?</h2>
 
         <p>At LHSA we like to provide our members with everything from volunteering opportunities to hands on clinical
@@ -57,8 +61,6 @@
             activities below!</p>
 
         <div class="slideshow">
-
-
 
             <figure class="main-slide-container">
                 <img id="main-slide" src="Assets/photos/img00013.jpg" alt="">
@@ -95,26 +97,28 @@
 
     </section>
 
-    <section class="section-break">
+    <section class="breakaway-section">
 
 
-        <div class="card">
+        <article class="card">
 
             <img src="Assets/Illustrations/undraw_camera_re_cnp4.svg" alt="">
 
             <span class="card-blurb">
-                <h3>Check out all the highlights from our previous events</h3>
-                <p>We like to show off our members' accomplishments and undertakings. Our club members are always taking
-                    photos at our events so you know exactly what we've been up to.</p>
-                <a class="button" href="#">Go to Gallery</a>
-            </span>
+                <p class="card-heading">Check out all the highlights from our previous events</p>
 
-        </div>
+                <p>We like to show off our members' accomplishments and undertakings. Our club members are always taking photos at our events so you know exactly what we've been up to.</p>
+
+                <span class="button-container">
+                    <a class="link-button" href="">Go to Gallery</a>
+                </span>
+            </span>
+        </article>
 
 
     </section>
 
-    <section class="content-section">
+    <section>
         <h2>Our Latest Event</h2>
 
         <!-- calendar is hidden by default -->
@@ -152,24 +156,27 @@
         <div class="no-events-container" id="no-events"></div>
     </section>
 
-    <section class="section-break">
+    <section class="breakaway-section">
 
-        <div class="card">
+        <article class="card">
 
             <img src="Assets/Illustrations/undraw_shared_goals_re_jvqd.svg" alt="">
 
             <span class="card-blurb">
-                <h3>Have a look at everything we've done so far</h3>
-                <p>Clinics, national conferences, medical school panels, volunteering and so much more. Go see the types
-                    of opportunities you could have by joining us.</p>
-                <a class="button" href="#">Go to Events</a>
+                <p class="card-heading">Have a look at everything we've done so far</p>
+                
+                <p>Clinics, national conferences, medical school panels, volunteering and so much more. Go see the types of opportunities you could have by joining us </p>
+
+                <span class="button-container">
+                    <a class="link-button" href="">Go to Events</a>
+                </span>
             </span>
 
-        </div>
+        </article>
 
     </section>
 
-    <section class="content-section">
+    <section>
         <h2>Our Mission</h2>
 
         <p>The Latinx Health Student Association is an organization built to inspire, empower, and motivate Latino
@@ -182,30 +189,33 @@
 
     </section>
 
-    <section class="section-break">
+    <section class="breakaway-section">
 
-        <div class="card">
+        <article class="card">
 
             <img src="Assets/Illustrations/undraw_about_us_page_re_2jfm.svg" alt="">
 
             <span class="card-blurb">
-                <h3>Learn more about the team behind LHSA</h3>
-                <p>Our board members come from diverse backgrounds and are all dedicated to helping our fellow Latinx
-                    students achieve their goals.</p>
-                <a class="button" href="about.html#team-bios">Go to About</a>
+                <p class="card-heading">Learn more about the team behind LHSA</p>
+
+                <p>Our board members come from diverse backgrounds and are all dedicated to helping our fellow Latinx students achieve their goals.</p>
+
+                <span class="button-container">
+                    <a class="link-button" href="about.html">Meet the Team</a>
+                </span>
             </span>
 
-        </div>
+        </article>
 
 
     </section>
 
-    <section class="content-section">
+    <section>
         <h2>We Have Resources For You</h2>
 
-        <div class="resource-container">
+        <div class="simple-container" id="resources-container">
 
-            <div>
+            <div >
                 <a href="#">
                     <img class="resource-thumbnail" src="Assets/linkThumbnails/aamcPremed.png">
                 </a>
@@ -226,49 +236,52 @@
 
     </section>
 
-    <section class="section-break">
+    <section class="breakaway-section">
 
-        <div class="card">
+        <article class="card">
 
             <img src="Assets/Illustrations/undraw_searching_re_3ra9.svg" alt="">
 
             <span class="card-blurb">
-                <h3>We looked for pre-health resources so you don't have to</h3>
-                <p>We know how overwhelming it can be to navigate all the available tools and resources for pre-health
-                    students on and off campus. So we made sure to narrow down the list of internships, scholarships,
-                    and opportunities.</p>
-                <a class="button" href="#">Go to Resources</a>
+                <p class="card-heading">We looked for pre-health resources so you don't have to</p>
+
+                <p>We know how overwhelming it can be to navigate all the available tools and resources for pre-health students on and off campus. So we made sure to narrow down the list of internships scholarships, and opportunities.</p>
+
+                <span class="button-container">
+                    <a class="link-button" href="#">Go to Resources</a>
+                </span>
             </span>
 
-        </div>
+        </article>
 
     </section>
 
     <footer>
-        <div class="footer-container">
-            <figure class="footer-logo">
-                <img src="Assets/lhsa_graphics/logo.png" alt="">
-            </figure>
+        <div class="simple-container">
 
-            <div class="social-container">
-                <p>Need to contact us? Send us an email or follow us on social media. Or contact one of our <a
-                        href="#">members</a> directly.</p>
-                <span>
-                    <a href="https://www.facebook.com/LHSA.ua">
-                        <img class="social-icon" src="Assets/Icons/social_media/facebook_media_online_social_icon.svg">
-                    </a>
-                </span>
-                <span>
-                    <a href="https://www.instagram.com/lhsaua/">
-                        <img class="social-icon" src="Assets/Icons/social_media/instagram_media_online_social_icon.svg">
-                    </a>
-                </span>
-                <span>
-                    <a href="mailto:lhsaua@gmail.com">
-                        <img class="social-icon"
-                            src="Assets/Icons/social_media/email_envelope_mail_message_send_icon.svg">
-                    </a>
-                </span>
+            <img class="footer-logo" src="Assets/lhsa_graphics/logo-white.png" alt="">
+            
+            <div>
+                <p>Need to contact us? Send us an email or follow us on social media. Or contact one of our <a href="#">members</a> directly.</p>
+                
+                <div class="simple-container">
+                    <span>
+                        <a href="https://www.facebook.com/LHSA.ua">
+                            <img class="social-icon" src="Assets/Icons/social_media/facebook_media_online_social_icon.svg">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="https://www.instagram.com/lhsaua/">
+                            <img class="social-icon" src="Assets/Icons/social_media/instagram_media_online_social_icon.svg">
+                        </a>
+                    </span>
+                    <span>
+                        <a href="mailto:lhsaua@gmail.com">
+                            <img class="social-icon"
+                                src="Assets/Icons/social_media/email_envelope_mail_message_send_icon.svg">
+                        </a>
+                    </span>
+                </div>
             </div>
 
         </div>

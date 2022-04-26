@@ -1,0 +1,40 @@
+/* Use an ID to add a hero image for other pages */
+
+/******************************************/
+/*              Hero Images               */
+/******************************************/
+
+#hero-index {
+    background: var(--main-brand-color) url(../Assets/hero.png);
+    background-size: cover;
+}
+
+/******************************************/
+/*            Footer Styling              */
+/******************************************/
+
+footer .simple-container{
+    align-items: center;
+
+}
+
+.footer-logo{
+    max-height: 70px;
+}
+
+.social-icon {
+    min-width: 40px;
+    margin: 0 8px;
+}
+
+/******************************************/
+/*                 Miscl.                 */
+/******************************************/
+
+#resources-container img {
+    max-width: 300px;
+}
+
+#resources-container {
+    text-align: center;
+}

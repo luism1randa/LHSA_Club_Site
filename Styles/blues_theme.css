@@ -91,6 +91,10 @@ cards */
         inset 0px -20px 20px -20px black; 
 }
 
+.breakaway-section h2 {
+    color: white;
+}
+
 footer {
     padding: 2vw 7vw;
     background-color: #33353C;
@@ -302,8 +306,13 @@ footer {
         font-weight: 700;
     }
 
+    .team-details {
+        display: block;
+        text-align: center;
+    }
+
     .team-details p {
-        margin: 5px;
+        margin: 8px;
     }
 
     .team-bio {

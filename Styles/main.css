@@ -1,6 +1,6 @@
 
 body{
-    padding: 0;
+    padding: 80px 0 0 0;
     margin: 0 auto;
     max-width: 1500px;
     font-family: Roboto, Helvetica, sans-serif;
@@ -48,7 +48,7 @@ body{
     a {
         text-decoration: none;
         font-weight: 500;
-        color: #143148;
+        color: #1f496b;
     }
 
     .button {
@@ -133,7 +133,7 @@ body{
 /*             Section Styling            */
 /******************************************/
 
-    .content-section{
+    section{
         /* background-color: #FAF9F6; */
         background-color: white;
         padding: 7vw;
@@ -144,7 +144,7 @@ body{
     /******************************************/
 
         .hero-section{
-            margin-top: 80px;
+            
             padding: 7vw;
             min-height: 220px;
             background-image: url(../Assets/hero.png);
@@ -214,6 +214,10 @@ body{
                 box-shadow: 
                     inset 0px 20px 20px -20px black, 
                     inset 0px -20px 20px -20px black;            
+            }
+
+            .section-break h2{
+                color: white;
             }
 
             .card{
@@ -334,3 +338,122 @@ body{
             max-width: 40px;
             margin: 0 8px;
         }
+
+/******************************************/
+/*              Grid Styling              */
+/******************************************/
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        column-gap: 5%;
+        row-gap: 5%;
+        margin: 20px 0;
+    
+    }
+    
+    .grid-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+    
+    .grid-container div img {
+        width: 50px;
+        
+        }
+
+
+/******************************************/
+/*             Member Cards               */
+/******************************************/
+
+    .member-bio{
+        display: flex;
+        justify-content: space-around;
+        border-radius: 40px;
+
+        background-color: white;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.173);
+        padding: 4vw;
+        margin: 50px 0;
+        min-height: 300px;
+        
+    }
+
+    .avatar-name{
+        color: #1A3146;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .avatar-labels p{
+        margin: 5px 0;
+    }
+
+    .avatar-title{
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .avatar-bio{
+        text-align: left;
+        padding: 0 5vw;
+    }
+
+        .avatar{
+            border: 5px solid rgb(220, 220, 204);
+            border-radius: 50%;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.173);
+            
+            max-height: 250px;
+        }
+
+
+        @media (max-width:1000px) {
+            .member-bio{
+                flex-wrap: wrap;
+            }
+
+            .avatar{
+                max-height: 200px;
+            }
+        }
+
+
+
+
+/******************************************/
+/*            iFrame Styling              */
+/******************************************/
+
+    .iframe-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+    }
+    
+    .iframe-container iframe{
+    
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+    
+    }
+
+
+    .map-routes-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .map-routes-container img{
+        max-height: 300px;
+    }

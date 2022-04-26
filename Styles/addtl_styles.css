@@ -9,6 +9,15 @@
     background-size: cover;
 }
 
+#hero-register{
+    background: var(--main-brand-color) url(../Assets/register-hero.jpg);
+    background-size: cover;
+}
+
+#hero-register h1 {
+    text-align: center;
+}
+
 /******************************************/
 /*            Footer Styling              */
 /******************************************/

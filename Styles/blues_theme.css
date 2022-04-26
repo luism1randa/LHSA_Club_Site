@@ -386,6 +386,41 @@ footer {
         justify-content: flex-end;
     }
 
+
+/******************************************/
+/*       Registration-Form Styling        */
+/******************************************/
+
+.form-container {
+    display: block;
+    background-color: white;
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 500px;
+    border: 0px rgba(0, 0, 0, 0.685);
+    border-radius: 30px;
+    box-shadow: 1px 1px 5px rgba(26, 49, 70, 0.274);
+    text-align: center;
+}
+
+    .form-container input{
+        width: 100%;
+        height: 50px;
+        padding: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid gray;
+
+    }
+
+    .form-submit{
+        width: 100%;
+        color: white;
+        background-color: var(--main-brand-color);
+        border-radius: 50px;
+    }
+
 /******************************************/
 /*            iFrame Styling              */
 /******************************************/

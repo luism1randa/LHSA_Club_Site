@@ -18,6 +18,12 @@
     text-align: center;
 }
 
+#hero-transport {
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-city.png);
+
+    background-size: cover;
+}
+
 /******************************************/
 /*            Footer Styling              */
 /******************************************/

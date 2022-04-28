@@ -110,6 +110,7 @@ footer {
     justify-content: space-between;
     position: fixed;
     top: 0;
+    z-index: 5;
     
     max-width: 1500px;
     width: 100%;
@@ -299,6 +300,14 @@ footer {
         color: black;
     }
 
+    
+
+    @media (max-width: 700px) {
+        .team-card {
+            flex-wrap: wrap;padding: 4vw 1vw;
+        }
+    }
+
     .team-name {
         color: var(--main-brand-color);
         text-transform: uppercase;
@@ -321,10 +330,17 @@ footer {
     }
 
     .avatar {
-        border: 5px solid rgb(220, 220, 204);
+        border: 5px solid rgb(235, 235, 233);
         border-radius: 50%;
         box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.173);
+        
         max-height: 250px;
+    }
+
+    @media (max-width: 900px) {
+        .avatar {
+            max-height: 200px;
+        }
     }
 
 /******************************************/
@@ -344,7 +360,6 @@ footer {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         column-gap: 5%;
-        /* row-gap: 5%; */
         margin: 20px 0;
     }
 
@@ -431,11 +446,11 @@ footer {
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
+    z-index: 0;
     height:0;
 }
 
 .iframe-container iframe{
-
     left:0;
     top:0;
     height:100%;

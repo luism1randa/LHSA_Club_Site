@@ -1,0 +1,112 @@
+/* Use an ID to add a hero image for other pages */
+
+/******************************************/
+/*              Hero Images               */
+/******************************************/
+
+#hero-index {
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-home.png);
+    background-size: cover;
+}
+
+#hero-register{
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-register.jpg);
+    background-size: cover;
+}
+
+#hero-register h1 {
+    text-align: center;
+}
+
+#hero-transport {
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-city.png);
+
+    background-size: cover;
+}
+
+/******************************************/
+/*            Footer Styling              */
+/******************************************/
+
+footer .simple-container{
+    align-items: center;
+
+}
+
+.footer-logo{
+    max-height: 70px;
+}
+
+.social-icon {
+    min-width: 40px;
+    margin: 0 8px;
+}
+
+/******************************************/
+/*                 Miscl.                 */
+/******************************************/
+
+@media (max-width: 700px) {
+    .call-to-action-container {
+        justify-content: center;
+    }
+}
+
+#resources-container img {
+    max-width: 300px;
+}
+
+#resources-container {
+    text-align: center;
+}
+
+
+    /******************************************/
+    /*             Transport Page             */
+    /******************************************/
+
+    .map-embed {
+        margin: 20px 0;
+        width: 48%;
+    }
+
+    @media (max-width: 900px){
+        .map-embed {
+            width: 100%;
+        }
+    }
+
+    .route-img {
+        margin: 10px;
+    }
+
+    .route-img img {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 400px;
+
+        border-radius: 10px;
+        border: 5px solid rgb(255, 255, 255);
+        box-shadow: 
+                rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    }
+
+    .garage-map {
+        box-sizing: border-box;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        border: 15px solid rgb(255, 255, 255);
+        box-shadow: 
+                rgba(0, 0, 0, 0.12) 0px 1px 3px,
+                rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        
+    }
+
+    #parking-garage-map {
+        min-height: 200px;
+    }
+
+

@@ -5,12 +5,12 @@
 /******************************************/
 
 #hero-index {
-    background: var(--main-brand-color) url(../Assets/hero.png);
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-home.png);
     background-size: cover;
 }
 
 #hero-register{
-    background: var(--main-brand-color) url(../Assets/register-hero.jpg);
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-register.jpg);
     background-size: cover;
 }
 

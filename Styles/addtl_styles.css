@@ -20,7 +20,11 @@
 
 #hero-transport {
     background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-city.png);
+    background-size: cover;
+}
 
+#hero-resources {
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-resources.svg);
     background-size: cover;
 }
 
@@ -110,3 +114,75 @@ footer .simple-container{
     }
 
 
+#research-expand {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #research-expand {
+        display: block;
+    }
+
+    #research-collapse {
+        display: none;
+    }
+
+    #research-page {
+        display: none;
+    }
+}
+
+
+#pre-health-expand {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #pre-health-expand {
+        display: block;
+    }
+
+    #pre-health-collapse {
+        display: none;
+    }
+
+    #pre-health-page {
+        display: none;
+    }
+}
+
+#volunteer-expand {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #volunteer-expand {
+        display: block;
+    }
+
+    #volunteer-collapse {
+        display: none;
+    }
+
+    #volunteer-page {
+        display: none;
+    }
+}
+
+#intern-expand {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    #intern-expand {
+        display: block;
+    }
+
+    #intern-collapse {
+        display: none;
+    }
+
+    #intern-page {
+        display: none;
+    }
+}

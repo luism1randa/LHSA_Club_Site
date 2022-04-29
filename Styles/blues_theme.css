@@ -521,7 +521,7 @@ footer {
 .img-frame {
     box-sizing: border-box;
 
-    margin-right: 20px;
+    margin: 20px;
 
     border-radius: 10px;
     border: 6px solid rgb(255, 255, 255);

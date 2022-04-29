@@ -62,6 +62,8 @@ if(isset($_GET['nextEvent'])){
     }   
 }
 
+
+// Gets multiple next events
 if (isset($_GET['allNextEvents'])){
 
     // TODO: test
@@ -89,6 +91,8 @@ if (isset($_GET['allNextEvents'])){
 
             $eventList[$i] = $event;
         };
+
+        echo json_encode($eventList);
     }
 }
 

@@ -28,6 +28,11 @@
     background-size: cover;
 }
 
+#hero-events {
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-news.svg);
+    background-size: cover;
+}
+
 /******************************************/
 /*            Footer Styling              */
 /******************************************/
@@ -186,3 +191,19 @@ footer .simple-container{
         display: none;
     }
 }
+
+
+.flyer-container {
+    justify-items: center;
+}
+
+
+.flyer-container img {
+    object-fit: cover;
+    height: 300px;
+    width: 300px;
+
+    margin: 10px;
+
+}
+

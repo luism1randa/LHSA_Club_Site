@@ -194,16 +194,30 @@ footer .simple-container{
 
 
 .flyer-container {
-    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: auto;
+    grid-auto-rows: auto; */
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .flyer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
 .flyer-container img {
-    object-fit: cover;
-    height: 300px;
-    width: 300px;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
 
-    margin: 10px;
+
+
+
 
 }
 

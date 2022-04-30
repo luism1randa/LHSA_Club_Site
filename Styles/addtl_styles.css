@@ -28,6 +28,11 @@
     background-size: cover;
 }
 
+#hero-events {
+    background: var(--main-brand-color) url(../Assets/photos/hero_images/hero-news.svg);
+    background-size: cover;
+}
+
 /******************************************/
 /*            Footer Styling              */
 /******************************************/
@@ -56,8 +61,26 @@ footer .simple-container{
     }
 }
 
+#resources-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-weight: 500;
+}
+
 #resources-container img {
-    max-width: 300px;
+    width: 100px;
+    border: 20px solid white;
+    margin: 0;
+}
+
+@media (max-width: 700px){
+
+    #resources-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: .9em;
+    }
+    
 }
 
 #resources-container {
@@ -114,75 +137,113 @@ footer .simple-container{
     }
 
 
+
+/******************************************/
+/*             Resources Page             */
+/******************************************/
+
 #research-expand {
     display: none;
 }
 
-@media (max-width: 800px) {
-    #research-expand {
-        display: block;
-    }
+    @media (max-width: 800px) {
+        #research-expand {
+            display: block;
+        }
 
-    #research-collapse {
-        display: none;
-    }
+        #research-collapse {
+            display: none;
+        }
 
-    #research-page {
-        display: none;
+        #research-page {
+            display: none;
+        }
     }
-}
 
 
 #pre-health-expand {
     display: none;
 }
 
-@media (max-width: 800px) {
-    #pre-health-expand {
-        display: block;
-    }
+    @media (max-width: 800px) {
+        #pre-health-expand {
+            display: block;
+        }
 
-    #pre-health-collapse {
-        display: none;
-    }
+        #pre-health-collapse {
+            display: none;
+        }
 
-    #pre-health-page {
-        display: none;
+        #pre-health-page {
+            display: none;
+        }
     }
-}
 
 #volunteer-expand {
     display: none;
 }
 
-@media (max-width: 800px) {
-    #volunteer-expand {
-        display: block;
-    }
+    @media (max-width: 800px) {
+        #volunteer-expand {
+            display: block;
+        }
 
-    #volunteer-collapse {
-        display: none;
-    }
+        #volunteer-collapse {
+            display: none;
+        }
 
-    #volunteer-page {
-        display: none;
+        #volunteer-page {
+            display: none;
+        }
     }
-}
 
 #intern-expand {
     display: none;
 }
 
-@media (max-width: 800px) {
-    #intern-expand {
-        display: block;
+    @media (max-width: 800px) {
+        #intern-expand {
+            display: block;
+        }
+
+        #intern-collapse {
+            display: none;
+        }
+
+        #intern-page {
+            display: none;
+        }
     }
 
-    #intern-collapse {
-        display: none;
-    }
+/******************************************/
+/*             Events Page             */
+/******************************************/
 
-    #intern-page {
-        display: none;
-    }
+.flyer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-rows: auto;
+    grid-auto-rows: auto; */
+    column-gap: 20px;
+    row-gap: 20px;
+    align-items: center;
 }
+
+    @media (max-width: 500px) {
+        .flyer-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+
+.flyer-container img {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100%;
+
+
+
+
+
+}
+

@@ -1,8 +1,19 @@
-function expandAccordion(button, tab, tabPageID) {
-    let page = document.getElementById(tabPageID);
-    page.style.display = 'block';
+function collapseAccordian(expBtnID, collpBtnID, pageID) {
+    const collapseBtn = document.getElementById(collpBtnID);
+    const expBtn = document.getElementById(expBtnID);
+    const page = document.getElementById(pageID);
+
+    collapseBtn.style.display = 'none';
+    expBtn.style.display = 'block';
+    page.style.display = 'none';
 }
 
-function collapseAccordion(button, tab, tabPage) {
-    
+function expandAccordian(expBtnID, collpBtnID, pageID) {
+    const collapseBtn = document.getElementById(collpBtnID);
+    const expBtn = document.getElementById(expBtnID);
+    const page = document.getElementById(pageID);
+
+    collapseBtn.style.display = 'block';
+    expBtn.style.display = 'none';
+    page.style.display = 'block';
 }

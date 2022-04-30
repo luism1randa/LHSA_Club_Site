@@ -14,11 +14,13 @@
 
     <title>Latinx Health Student Association</title>
     <link rel="icon" type="image/x-icon" href="Assets/lhsa_graphics/favicon.svg">
+    <script type="text/javascript" src="scripts/mobile-menu.js"></script>
 </head>
 
 <body>
     <header>
         <nav class="nav-bar">
+
             <a href="index.html">
                 <img class="nav-logo" src="Assets/lhsa_graphics/logo.png">
             </a>
@@ -30,7 +32,53 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="resources.html">Resources</a>
                 <a href="find_us.html">Find Us</a>
+            </div>
 
+            <button class="mobile-nav-button" id="menu-expand-btn" onclick="expandMobileMenu('menu-expand-btn', 'menu-collapse-btn', 'mobile-menu')">
+                <img src="Assets/Icons/menu_black_24dp.svg" alt="">
+            </button>
+
+            <button class="mobile-nav-button" id="menu-collapse-btn" onclick="collapseMobileMenu('menu-expand-btn', 'menu-collapse-btn', 'mobile-menu')">
+                <img src="Assets/Icons/menu_open_black_24dp.svg" alt="">
+            </button>
+
+            <div class="mobile-nav-links" id="mobile-menu" >
+                <a href="index.html">
+                    <span class="menu-item">
+                        <p>Home</p>
+                        <p>&#62;</p>
+                    </span>
+                </a>
+                <a href="events.html">
+                    <span class="menu-item">
+                        <p>Events</p>
+                        <p>&#62;</p>
+                    </span>
+                </a>
+                <a href="about.html">
+                    <span class="menu-item">
+                        <p>About</p>
+                        <p>&#62;</p>
+                    </span>
+                </a>
+                <a href="gallery.html">
+                    <span class="menu-item">
+                        <p>Gallery</p>
+                        <p>&#62;</p>
+                    </span>
+                </a>
+                <a href="resources.html">
+                    <span class="menu-item">
+                        <p>Resources</p>
+                        <p>&#62;</p>
+                    </span>
+                </a>
+                <a href="find_us.html">
+                    <span class="menu-item">
+                        <p>Find Us</p>
+                        <p>&#62;</p>
+                    </span>
+                </a>
             </div>
         </nav>
 

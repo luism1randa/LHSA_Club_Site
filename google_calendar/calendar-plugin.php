@@ -9,7 +9,9 @@ $calendarId = 'si0lf7jtjtn7la3po4i0gjp1a8@group.calendar.google.com';
 require_once 'google-api-php-client-2.4.1/vendor/autoload.php';
 
 // set environment variable to use your downloaded Service account key
-$credentialsPath = '/Applications/MAMP/htdocs/LHSA/google_calendar/lhsa-calendar.json';
+// $credentialsPath = '/Applications/MAMP/htdocs/LHSA/google_calendar/lhsa-calendar.json';
+
+$credentialsPath = 'lhsa-calendar.json';
 putenv("GOOGLE_APPLICATION_CREDENTIALS=" . $credentialsPath);
 
 $scope = 'https://www.googleapis.com/auth/calendar.readonly';

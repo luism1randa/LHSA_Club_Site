@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles/blues_theme.css">
-    <link rel="stylesheet" href="Styles/addtl_styles.css">
-    <link rel="stylesheet" href="slideshow/slideshow.css">
-    <link rel="stylesheet" href="google_calendar/calendar.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <title>Resources - LHSA</title>
-    <link rel="icon" type="image/x-icon" href="Assets/lhsa_graphics/favicon.svg">
-
-    <script type="text/javascript" src="scripts/mobile-menu.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <link rel="stylesheet" href="Styles/blues_theme.css">
+        <link rel="stylesheet" href="Styles/addtl_styles.css">
+        <link rel="stylesheet" href="slideshow/slideshow.css">
+        <link rel="stylesheet" href="google_calendar/calendar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    
+        <title>Latinx Health Student Association</title>
+        <link rel="icon" type="image/x-icon" href="Assets/lhsa_graphics/favicon.svg">
+        
+    </head>
 <body>
 
     <header>
@@ -34,15 +33,11 @@
                 <a href="find_us.html">Find Us</a>
             </div>
 
-            <button class="mobile-nav-button" id="menu-expand-btn" onclick="expandMobileMenu('menu-expand-btn', 'menu-collapse-btn', 'mobile-menu')">
+            <button id="mobile-nav-btn">
                 <img src="Assets/Icons/menu_black_24dp.svg" alt="">
             </button>
 
-            <button class="mobile-nav-button" id="menu-collapse-btn" onclick="collapseMobileMenu('menu-expand-btn', 'menu-collapse-btn', 'mobile-menu')">
-                <img src="Assets/Icons/menu_open_black_24dp.svg" alt="">
-            </button>
-
-            <div class="mobile-nav-links" id="mobile-menu" >
+            <div class="mobile-nav-links" id="mobile-nav-menu">
                 <a href="index.html">
                     <span class="menu-item">
                         <p>Home</p>
@@ -368,5 +363,7 @@
 
 
     </script>
+
+    <script type="text/javascript" src="scripts/mobile-menu.js"></script>
 </body>
 </html>

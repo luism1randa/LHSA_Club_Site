@@ -81,6 +81,8 @@ Extras include:
 - The club already had a facebook page. Facebook chat plugin was integrated so site visitors could automatically engage with club members and ask frequently asked questions. 
 - chat integration was customized with color to fit with the sites overall aesthetic and brand
 
+| Facebook chat login | Facebook chat FAQ |
+| ----------- | ----------- |
 | ![Screenshot of Facebook Chat](screenshots/facebook_chat_1.png) | ![Screenshot of Facebook Chate 2](screenshots/facebook_chat_2.png) |
 
 

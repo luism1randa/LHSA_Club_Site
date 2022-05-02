@@ -8,6 +8,7 @@ Custom components include:
 - Accordians
 - Responsive navigation menu
 - Slideshow with carousel
+- Image gallery
 
 Extras include:
 - Facebook chat integration
@@ -15,7 +16,7 @@ Extras include:
 
 ## Feature Highlights
 
-### Google Calendar Component | PHP, AJAX, Javascript
+### Google Calendar Component | PHP, AJAX, Javascript, HTML, CSS
 - Uses Google Calendar API
 - Uses Google's Oauth to authenticate calendar account
 - Acccesses a google calendar feed and extracts details for a single or multiple events including:
@@ -31,7 +32,7 @@ Extras include:
 | ![Screenshot of Google Calendar Plugin on Dekstop](screenshots/calendar_desktop.png?) | ![Screenshot of mobile google Calendar Plugin](screenshots/calendar_mobile.png) |
 
 
-### Navigation Menu
+### Navigation Menu | HTML, CSS, Javascript
 - Menu navigation is fully respnosive to large and small screens
 - On large screens it expands to show full links to all pages 
 - on small screens, links collapse into a hamburger menu which can be used to open up a menu containing page links
@@ -56,31 +57,42 @@ Extras include:
 | ![Screenshot of expanded accordion on mobile](screenshots/accordion_mobile_expanded.png) | ![Screenshot of collapsed accordion on mobile](screenshots/accordion_mobile_collapsed.png) |
 
 
-### Slideshow With Carousel
+### Slideshow With Carousel | HTML, CSS, Javascript
 - Slideshow is meant to showcase photos of most exciting events. The user can switch between photos using the next and previous buttons integrated into the carousel below it
 - the carousel also contains thumbnails of all the available images in the slideshow
 
-| Expanded view on mobile | Collapsed view on mobile |
+| Desktop View | Mobile View |
 | ----------- | ----------- |
 | ![Screenshot of slideshow on desktop](screenshots/slideshow_desktop.png) | ![Screenshot of slideshow on mobile](screenshots/slideshow_mobile.png) |
 
 
+### Image Gallery | HTML, CSS
+- Responsive image gallery displayed in a grid
+- The first image is highlighted on both desktop and mobile views
+
+| Desktop View | Mobile View |
+| ----------- | ----------- |
+| ![Screenshot of image gallery on desktop](screenshots/gallery_desktop.png) | ![Screenshot of image gallery on mobile](screenshots/gallery_mobile.png) |
+
+
 ## Extra Features
 
-### Facebook Chat integration
+### Facebook Chat integration | HTML
 - The club already had a facebook page. Facebook chat plugin was integrated so site visitors could automatically engage with club members and ask frequently asked questions. 
 - chat integration was customized with color to fit with the sites overall aesthetic and brand
 
 | ![Screenshot of Facebook Chat](screenshots/facebook_chat_1.png) | ![Screenshot of Facebook Chate 2](screenshots/facebook_chat_2.png) |
 
 
-### Google Maps Integration
+### Google Maps Integration | HTML, CSS
 - Google maps embeds were used to show where the club meets on different occasions. Maps are completely interactable and allow user to zoom in on specific streets or get gps directions.
 - embed was made fully responsive for large and small screen sizes
+
 ![Screenshot of Google Maps Integrations](screenshots/google_maps.png)
 
 
-### Google My Maps Integration
+### Google My Maps Integration | HTML, CSS
 - Google My Maps embed was also used to create a custom map showing available parking locations and details of said locations to club events.
 - embed was made fully responsive for large and small screen sizes
+
 ![Screenshot of Google My Maps](screenshots/google_my_maps.png)
